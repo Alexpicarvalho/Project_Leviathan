@@ -30,13 +30,19 @@ public partial class PlayerUI : MonoBehaviour
     private void CreateScriptReferences()
     {
         _playerHealth = _player.GetComponent<Health>();
+        _playerStamina = _player.GetComponent<Stamina>();
     }
 
     //Activate Event Listening
     private void OnEnable()
     {
+        //Health
         _playerHealth.OnHealthChanged += ShowHealth;
         ShowHealth(_playerHealth.CurrentHealth);
+
+        //Stamina
+        _playerStamina.OnStaminaChange += ShowStamina;
+        ShowStamina(_playerStamina.CurrentStamina);
 
     }
 
@@ -44,5 +50,6 @@ public partial class PlayerUI : MonoBehaviour
     private void OnDisable()
     {
         _playerHealth.OnHealthChanged -= ShowHealth;
+        _playerStamina.OnStaminaChange -= ShowStamina;
     }
 }

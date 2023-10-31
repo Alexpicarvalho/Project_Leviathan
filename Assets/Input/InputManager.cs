@@ -23,7 +23,7 @@ public class InputManager : MonoBehaviour
 
     //private void FixedUpdate()
     //{
-    //    _playerMovement.ProcessMovement(_onFoot.Movement.ReadValue<Vector2>());
+    //   _playerMovement.ProcessMovement(_onFoot.Movement.ReadValue<Vector2>());
     //}
 
     //private void LateUpdate()
