@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public partial class PlayerUIManager // Stamina Handeling
+public partial class PlayerUI // Stamina Handeling
 {
     [Header("Stamina")]
     //Serialized References

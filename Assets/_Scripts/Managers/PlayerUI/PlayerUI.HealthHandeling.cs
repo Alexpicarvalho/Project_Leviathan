@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public partial class PlayerUIManager // Health Handeling
+public partial class PlayerUI // Health Handeling
 {
     [Header("Health")]
     //Serialized References

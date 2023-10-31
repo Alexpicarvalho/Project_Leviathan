@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public partial class PlayerUIManager : MonoBehaviour
+public partial class PlayerUI : MonoBehaviour
 {
     /* This is a partial class responsible for handeling everything related to the persistant UI
      * seen by the player (Stats, skills, weapons etc...). Each part of the class will handle the
@@ -12,7 +12,7 @@ public partial class PlayerUIManager : MonoBehaviour
 
     
     //Singleton
-    public static PlayerUIManager Instance { get; private set; }
+    public static PlayerUI Instance { get; private set; }
 
     [Header("General References")]
     //Player Reference
