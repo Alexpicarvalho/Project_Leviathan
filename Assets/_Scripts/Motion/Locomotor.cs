@@ -36,8 +36,8 @@ public class Locomotor : MonoBehaviour
 
     protected virtual void ProcessMovement(Vector2 movementDirection) { }
     protected virtual void ProcessMovement(Vector3 movementDirection) { }
-    protected virtual void IncreaseSpeed(float amount) { }
-    protected virtual void DecreaseSpeed(float amount) { }
+    protected virtual void IncreaseSpeed(float amount) { }  //Swap these for a multiplier value, not a flat amount
+    protected virtual void DecreaseSpeed(float amount) { } 
     protected virtual void SetSpeed(float amount) { }
     protected virtual void ProcessJump() {}
     protected virtual bool CanJump() { return _locomotionData.CanJump; }   
