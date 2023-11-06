@@ -12,11 +12,9 @@ public class LocomotionData : ScriptableObject
     [field: SerializeField] public float BaseDeceleration { get; private set; }
 
     [field: Header("Jump Values")]
-    [field: SerializeField] public float BaseJumpHeight { get; private set; }
     [field: SerializeField] public float BaseJumpTime { get; private set; }
     [field: SerializeField] public float BaseJumpSpeed { get; private set; }
-    [field: SerializeField] public float BaseJumpGravity { get; private set; }
-    [field: SerializeField] public float BaseJumpFallGravity { get; private set; }
+    [field: SerializeField] public AnimationCurve JumpSpeedCurve { get; private set; }
 
     [field: SerializeField] public bool CanJump { get; private set; } = true;
 

@@ -8,7 +8,7 @@ public class Locomotor : MonoBehaviour
     // It is meant to be inherited from, and not used directly.
 
     //private fields
-    [SerializeField] private LocomotionData _locomotionData;
+    [SerializeField] protected LocomotionData _locomotionData;
 
     //runtime fields
     #region runtime fields

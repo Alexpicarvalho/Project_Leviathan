@@ -12,3 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800c591ffc85da745802870761cce479, type: 3}
   m_Name: PlayerLocomotionData
   m_EditorClassIdentifier: 
+  <BaseMaxSpeed>k__BackingField: 6
+  <BaseStartSpeed>k__BackingField: 2
+  <BaseAcceleration>k__BackingField: 1
+  <BaseDeceleration>k__BackingField: 0.3
+  <BaseJumpTime>k__BackingField: 0.6
+  <BaseJumpSpeed>k__BackingField: 2
+  <JumpSpeedCurve>k__BackingField:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  <CanJump>k__BackingField: 1
