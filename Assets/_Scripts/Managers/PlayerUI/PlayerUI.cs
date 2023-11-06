@@ -6,7 +6,7 @@ using UnityEngine;
 
 public partial class PlayerUI : MonoBehaviour
 {
-    /* This is a partial class responsible for handeling everything related to the persistant UI
+    /* This is a partial class responsible for handeling everything related to the persistant HUD
      * seen by the player (Stats, skills, weapons etc...). Each part of the class will handle the
      references and methods for that specific part*/
 
