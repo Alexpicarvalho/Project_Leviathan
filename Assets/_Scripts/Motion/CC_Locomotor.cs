@@ -8,10 +8,6 @@ public class CC_Locomotor : Locomotor
     //private fields
     private CharacterController _characterController;
 
-    [SerializeField] private LayerMask _jumpableLayers;
-    [SerializeField] private Transform _groundChecker;
-
-
     //Methods
     private void Awake()
     {
@@ -28,21 +24,17 @@ public class CC_Locomotor : Locomotor
 
     protected override void ProcessJump()
     {
-        if(!IsGrounded()) return;
+        if(_isGrounded) return;
         base.ProcessJump();
 
         StartCoroutine(Jump());
     }
 
-    private bool IsGrounded()
-    {
-        return Physics.CheckSphere(_groundChecker.position, 0.1f, _jumpableLayers);
-    }
-
     //TEMPORARY - TESTS ONLY
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         Vector3 move = new Vector3(0, 0, 0);
 
         // Use Input.GetKey and check for WASD keys to calculate the move vector

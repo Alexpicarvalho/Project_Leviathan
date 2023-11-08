@@ -15,8 +15,9 @@ public class Damageable : MonoBehaviour
 
     //public methods
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(float amount, bool isPercentual = false)
     { 
-        _health.LoseHealth(amount);
+        if(!isPercentual) _health.LoseHealth(amount);
+        else _health.LoseHealth(_health.MaxHealth * amount);
     }
 }
