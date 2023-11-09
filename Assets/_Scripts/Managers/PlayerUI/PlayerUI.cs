@@ -37,19 +37,25 @@ public partial class PlayerUI : MonoBehaviour
     private void OnEnable()
     {
         //Health
-        _playerHealth.OnHealthChanged += ShowHealth;
-        ShowHealth(_playerHealth.CurrentHealth);
-
+        if (_playerHealth)
+        {
+            _playerHealth.OnHealthChanged += ShowHealth;
+            ShowHealth(_playerHealth.CurrentHealth);
+        }
+        
         //Stamina
-        _playerStamina.OnStaminaChange += ShowStamina;
-        ShowStamina(_playerStamina.CurrentStamina);
+        if (_playerStamina)
+        {
+            _playerStamina.OnStaminaChange += ShowStamina;
+            ShowStamina(_playerStamina.CurrentStamina);
+        }
 
     }
 
     //Deactivate Event Listening
     private void OnDisable()
     {
-        _playerHealth.OnHealthChanged -= ShowHealth;
-        _playerStamina.OnStaminaChange -= ShowStamina;
+        if(_playerHealth) _playerHealth.OnHealthChanged -= ShowHealth;
+        if(_playerStamina) _playerStamina.OnStaminaChange -= ShowStamina;
     }
 }

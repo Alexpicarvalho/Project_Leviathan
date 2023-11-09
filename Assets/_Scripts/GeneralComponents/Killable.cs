@@ -24,6 +24,7 @@ public class Killable : MonoBehaviour
     {
         if (!_canDie) return;
 
+        Debug.Log("I Died");
         //Code To Handle Death
         //Raise Event Of Death to be seen by UI , Animation Control etc...
     }

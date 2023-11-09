@@ -776,6 +776,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6515241824378318924, guid: 09c353e3aa17eb743bde520826f616b4,
+        type: 3}
+      propertyPath: _healthRegenPerSecond
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6521859813150300985, guid: 09c353e3aa17eb743bde520826f616b4,
         type: 3}
       propertyPath: m_Enabled
@@ -941,7 +946,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4310179640980796061, guid: 09c353e3aa17eb743bde520826f616b4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -953,6 +959,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2036884049}
+    - targetCorrespondingSourceObject: {fileID: 8022967426864863388, guid: 09c353e3aa17eb743bde520826f616b4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036884050}
   m_SourcePrefab: {fileID: 100100000, guid: 09c353e3aa17eb743bde520826f616b4, type: 3}
 --- !u!1 &874441936
 GameObject:
@@ -1433,7 +1443,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337920388}
-  m_LocalRotation: {x: 0.24316448, y: -0.00000003231991, z: 0.000000008102242, w: 0.96998507}
+  m_LocalRotation: {x: 0.2431645, y: 1.7232811e-15, z: -9.268357e-16, w: 0.96998507}
   m_LocalPosition: {x: 1372.3402, y: 75.04252, z: 1091.0548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2076,7 +2086,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667431475}
-  m_LocalRotation: {x: 0.24316448, y: -0.00000003231991, z: 0.000000008102242, w: 0.96998507}
+  m_LocalRotation: {x: 0.2431645, y: 1.7232811e-15, z: -9.268357e-16, w: 0.96998507}
   m_LocalPosition: {x: 1372.3402, y: 75.04252, z: 1091.0548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2322,3 +2332,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &2036884050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036884037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59941ee15d75e34fa84d574508349b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
