@@ -11,13 +11,6 @@ public class Locomotor : MonoBehaviour
     //private fields
     [SerializeField] protected LocomotionData _locomotionData;
 
-    [Header("Ground Checking")]
-    [SerializeField] protected Transform _groundChecker;
-    [SerializeField] private LayerMask _groundLayers;
-    protected bool _isGrounded = true;
-    public event Action OnUngrounding;
-    public event Action OnLanding;
-
     //runtime fields
     #region runtime fields
     protected float _currentSpeed = 5f;
@@ -49,20 +42,4 @@ public class Locomotor : MonoBehaviour
     protected virtual void SetSpeed(float amount) { }
     protected virtual void ProcessJump() {}
     protected virtual bool CanJump() { return _locomotionData.CanJump; }
-    protected virtual void Update()
-    {
-        GroundCheck();
-    }
-
-    protected virtual void GroundCheck() 
-    {
-        bool wasGrounded = _isGrounded;
-
-        if(Physics.CheckSphere(_groundChecker.position, 0.1f, _groundLayers)) _isGrounded = true;
-        else _isGrounded = false;
-
-        if(wasGrounded && !_isGrounded) OnUngrounding?.Invoke();
-        if(!wasGrounded && _isGrounded) OnLanding?.Invoke();
-    }
-
 }

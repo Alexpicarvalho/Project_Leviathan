@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))] // OR EQUIVALENT IF I MAKE A CUSTOM CONTROLLER
+[RequireComponent(typeof(CharacterController), typeof(Grounded))] // OR EQUIVALENT IF I MAKE A CUSTOM CONTROLLER
 public class CC_Locomotor : Locomotor
 {
     //private fields
     private CharacterController _characterController;
+    private Grounded _grounded;
 
     //Methods
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
+        _grounded = GetComponent<Grounded>();
         _currentSpeed = BaseMaxSpeed;
     }
 
@@ -24,7 +26,7 @@ public class CC_Locomotor : Locomotor
 
     protected override void ProcessJump()
     {
-        if(_isGrounded) return;
+        if(_grounded.IsGrounded) return;
         base.ProcessJump();
 
         StartCoroutine(Jump());
@@ -32,9 +34,8 @@ public class CC_Locomotor : Locomotor
 
     //TEMPORARY - TESTS ONLY
 
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
         Vector3 move = new Vector3(0, 0, 0);
 
         // Use Input.GetKey and check for WASD keys to calculate the move vector
@@ -86,11 +87,5 @@ public class CC_Locomotor : Locomotor
 
             yield return null;
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(_groundChecker.position, 0.1f);
     }
 }

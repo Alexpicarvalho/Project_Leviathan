@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Locomotor), typeof(Damageable))]
+[RequireComponent(typeof(Grounded), typeof(Damageable))]
 
 public class Fall : MonoBehaviour
 {
@@ -12,16 +12,19 @@ public class Fall : MonoBehaviour
     [SerializeField] private float _distanceForMaxDamage;
     [SerializeField] AnimationCurve _hpPercentDamage;
 
-    private Locomotor _locomotor;
+    private Grounded _grounded;
     private Damageable _damageable;
 
     private float _highestPoint;
     private float _lowestPoint;
     private bool _stopChecking = true;
 
+    //Events
+    public event Action<float> OnTookFallDamage;
+
     private void Awake()
     {
-        _locomotor = GetComponent<Locomotor>();
+        _grounded = GetComponent<Grounded>();
         _damageable = GetComponent<Damageable>();
     }
 
@@ -57,7 +60,7 @@ public class Fall : MonoBehaviour
 
     private void OnEnable()
     {
-        _locomotor.OnUngrounding += StartFalling;
-        _locomotor.OnLanding += StopFalling;
+        _grounded.OnUngrounding += StartFalling;
+        _grounded.OnLanding += StopFalling;
     }
 }
