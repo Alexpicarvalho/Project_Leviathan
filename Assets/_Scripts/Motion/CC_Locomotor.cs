@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,14 @@ public class CC_Locomotor : Locomotor
     private CharacterController _characterController;
     private Grounded _grounded;
 
+    [Header("Rotation Smoothing Values")]
+    [SerializeField] private float _turnSmoothTime = 0.1f;
+    private float _turnSmoothVelocity;
+
+    //Jumping
+    private bool _jumping = false;
+    private Vector3 _verticalDirection = Vector3.zero;
+
     //Methods
     private void Awake()
     {
@@ -18,74 +27,60 @@ public class CC_Locomotor : Locomotor
     }
 
     //Override Methods
-    protected override void ProcessMovement(Vector3 movement)
+    public override void ProcessMovement(Vector3 movement)
     {
+        base.ProcessMovement(movement);
         // Move the character controller
-        _characterController.Move(movement * Time.deltaTime);
+        Debug.LogFormat("Moving at {0} mps towards {1}  ", CurrentSpeed, MovementDirection);
+        _characterController.Move((movement * CurrentSpeed + _verticalDirection) * Time.deltaTime );
     }
 
-    protected override void ProcessJump()
+    public override void ProcessRotation(float rotation)
     {
-        if(_grounded.IsGrounded) return;
-        base.ProcessJump();
+        //Maybe we can use DOTween to smooth the rotation?
+        float angle = Mathf.SmoothDampAngle(
+            transform.eulerAngles.y, 
+            rotation, 
+            ref _turnSmoothVelocity, 
+            _turnSmoothTime);
 
-        StartCoroutine(Jump());
+        // Rotate the character controller
+        transform.rotation = Quaternion.Euler(0f, angle, 0f);
     }
 
-    //TEMPORARY - TESTS ONLY
+    public override void ProcessJump()
+    {
+        if (!_grounded.IsGrounded) return;
+        base.ProcessJump();
+        _jumping = true;
+
+        // Apply jump force
+        _verticalDirection.y = Mathf.Sqrt(LocomotionData.BaseJumpSpeed * -3f * -9.81f);
+
+        //StartCoroutine(Jump());
+    }
+
+    public bool IsGrounded()
+    {
+        return _grounded.IsGrounded;
+    }
 
     private void Update()
     {
-        Vector3 move = new Vector3(0, 0, 0);
-
-        // Use Input.GetKey and check for WASD keys to calculate the move vector
-        if (Input.GetKey(KeyCode.W))
-        {
-            move += transform.forward;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            move -= transform.forward;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            move -= transform.right;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            move += transform.right;
-        }
-
-        // Normalize the move vector to ensure consistent movement speed in all directions
-        move.Normalize();
-
-        // Check if the character is grounded; if not, you might want to apply gravity
-        if (!_characterController.isGrounded)
-        {
-            move += Physics.gravity;
-        }
-
-        // Process the movement by calling the overridden method
-        ProcessMovement(move * _currentSpeed);
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ProcessJump();
-        }
+        if(!_grounded.IsGrounded) _verticalDirection += Physics.gravity * 3 * Time.deltaTime;
     }
+    //private IEnumerator Jump()
+    //{
+    //    float timer = 0;
+    //    while (timer < LocomotionData.BaseJumpTime)
+    //    {
+    //        float curveValue = LocomotionData.JumpSpeedCurve.Evaluate(timer / LocomotionData.BaseJumpTime);
+    //        float verticalSpeed = LocomotionData.BaseJumpSpeed * curveValue;
 
-    private IEnumerator Jump()
-    {
-        float timer = 0;
-        while (timer < _locomotionData.BaseJumpTime )
-        {
-            float curveValue = _locomotionData.JumpSpeedCurve.Evaluate(timer / _locomotionData.BaseJumpTime);
-            float verticalSpeed = _locomotionData.BaseJumpSpeed * curveValue;
+    //        _characterController.Move(new Vector3(0, verticalSpeed, 0) * Time.deltaTime);
+    //        timer += Time.deltaTime;
 
-            _characterController.Move(new Vector3(0, verticalSpeed, 0) * Time.deltaTime);
-            timer += Time.deltaTime;
-
-            yield return null;
-        }
-    }
+    //        yield return null;
+    //    }
+    //}
 }

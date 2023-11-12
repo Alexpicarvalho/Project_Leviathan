@@ -2,6 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public partial class CameraControl : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public partial class CameraControl : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+
         _cinemachineBrain = _cinemachineBrain_T.GetComponent<CinemachineBrain>();
         _virtualCamera = _cinemachineCam_T.GetComponent<CinemachineVirtualCamera>();
     }

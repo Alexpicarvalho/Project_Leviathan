@@ -28,6 +28,7 @@ public class Health : MonoBehaviour
 
     public void LoseHealth(float amount)
     {
+        Debug.LogFormat("Losing {0} health", amount);
         _currentHealth -= amount;
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
         OnHealthChanged?.Invoke(_currentHealth);
@@ -46,13 +47,6 @@ public class Health : MonoBehaviour
     {
         _healthRegenTickTimer += Time.deltaTime;
         if (_healthRegenTickTimer >= _healthRegenTickCooldown) RegenTick();
-
-
-        //TESTING
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            LoseHealth(10);
-        }
     }
 
     private void RegenTick()

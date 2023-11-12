@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Grounded : MonoBehaviour
@@ -12,6 +13,7 @@ public class Grounded : MonoBehaviour
     public bool IsGrounded { get; private set;} = true;
     public event Action OnUngrounding;
     public event Action OnLanding;
+    public event Action OnOutsideGrounding;
 
     private void FixedUpdate()
     {
@@ -28,10 +30,14 @@ public class Grounded : MonoBehaviour
         if (!wasGrounded && IsGrounded) OnLanding?.Invoke();
     }
 
+    public void OutsideGrounding()
+    {
+        OnOutsideGrounding?.Invoke();
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(_groundChecker.position, 0.1f);
     }
-
 }

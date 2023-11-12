@@ -9,7 +9,7 @@ public class Locomotor : MonoBehaviour
     // It is meant to be inherited from, and not used directly.
 
     //private fields
-    [SerializeField] protected LocomotionData _locomotionData;
+    public LocomotionData LocomotionData;
 
     //runtime fields
     #region runtime fields
@@ -22,24 +22,29 @@ public class Locomotor : MonoBehaviour
 
     //public properties
     #region public properties
-    public float BaseMaxSpeed => _locomotionData.BaseMaxSpeed;
-    public float BaseStartSpeed => _locomotionData.BaseStartSpeed;
-    public float BaseAcceleration => _locomotionData.BaseAcceleration;
-    public float BaseDeceleration => _locomotionData.BaseDeceleration;
+    public float BaseMaxSpeed => LocomotionData.BaseMaxSpeed;
+    public float BaseStartSpeed => LocomotionData.BaseStartSpeed;
+    public float BaseAcceleration => LocomotionData.BaseAcceleration;
+    public float BaseDeceleration => LocomotionData.BaseDeceleration;
     public float CurrentSpeed => _currentSpeed;
     public float CurrentMaxSpeed => _currentMaxSpeed;
     public float CurrentStartSpeed => _currentStartSpeed;
     public float CurrentAcceleration => _currentAcceleration;
     public float CurrentDeceleration => _currentDeceleration;
+    public Vector3 MovementDirection { get; protected set; }
     #endregion
+
+    //Events
+    public event Action OnJump;
 
     //Overridable methods
 
-    protected virtual void ProcessMovement(Vector2 movementDirection) { }
-    protected virtual void ProcessMovement(Vector3 movementDirection) { }
-    protected virtual void IncreaseSpeed(float amount) { }  //Swap these for a multiplier value, not a flat amount
-    protected virtual void DecreaseSpeed(float amount) { } 
-    protected virtual void SetSpeed(float amount) { }
-    protected virtual void ProcessJump() {}
-    protected virtual bool CanJump() { return _locomotionData.CanJump; }
+    public virtual void ProcessMovement(Vector2 movementDirection) { MovementDirection = movementDirection; }
+    public virtual void ProcessMovement(Vector3 movementDirection) { MovementDirection = movementDirection; }
+    public virtual void ProcessRotation(float rotation) { }
+    public virtual void IncreaseSpeed(float amount) { }  //Swap these for a multiplier value, not a flat amount
+    public virtual void DecreaseSpeed(float amount) { } 
+    public virtual void SetSpeed(float amount) { }
+    public virtual void ProcessJump() { OnJump?.Invoke(); }
+    public virtual bool CanJump() { return LocomotionData.CanJump; }
 }

@@ -38,6 +38,7 @@ public class Fall : MonoBehaviour
 
     private void StartFalling()
     {
+        _grounded.OnLanding += StopFalling;
         _highestPoint = transform.position.y;
         _stopChecking = false;
     }
@@ -48,6 +49,8 @@ public class Fall : MonoBehaviour
         float fallDistance = _highestPoint - _lowestPoint;
         _stopChecking = true;
 
+        if(fallDistance < _minDistanceForDamage) return;    
+
         CalculateDamage(fallDistance);
     }
 
@@ -55,12 +58,21 @@ public class Fall : MonoBehaviour
     {
         float ratio = fallDistance / _distanceForMaxDamage;
         float damage = _hpPercentDamage.Evaluate(ratio);
+
+        Debug.LogFormat("Fell {0} meters for {1}% damage", _highestPoint - _lowestPoint,damage * 100);
+
         _damageable.TakeDamage(damage, true);
+    }
+
+    public void CancelFall()
+    {
+        _stopChecking = true;
+        _grounded.OnLanding -= StopFalling;
     }
 
     private void OnEnable()
     {
         _grounded.OnUngrounding += StartFalling;
-        _grounded.OnLanding += StopFalling;
+        _grounded.OnOutsideGrounding += CancelFall;
     }
 }
