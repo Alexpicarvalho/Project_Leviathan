@@ -17,7 +17,7 @@ MonoBehaviour:
   <BaseAcceleration>k__BackingField: 1
   <BaseDeceleration>k__BackingField: 0.3
   <BaseJumpTime>k__BackingField: 0.6
-  <BaseJumpSpeed>k__BackingField: 4
+  <BaseJumpSpeed>k__BackingField: 2
   <JumpSpeedCurve>k__BackingField:
     serializedVersion: 2
     m_Curve:

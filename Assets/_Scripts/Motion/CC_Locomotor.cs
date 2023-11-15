@@ -31,7 +31,7 @@ public class CC_Locomotor : Locomotor
     {
         base.ProcessMovement(movement);
         // Move the character controller
-        Debug.LogFormat("Moving at {0} mps towards {1}  ", CurrentSpeed, MovementDirection);
+        //Debug.LogFormat("Moving at {0} mps towards {1}  ", CurrentSpeed, MovementDirection);
         _characterController.Move((movement * CurrentSpeed + _verticalDirection) * Time.deltaTime );
     }
 
@@ -60,6 +60,12 @@ public class CC_Locomotor : Locomotor
         //StartCoroutine(Jump());
     }
 
+    public void ProcessDash(float dashDistance, float dashDuration, AnimationCurve dashSpeedCurve)
+    {
+        StartCoroutine(Dash(dashDistance, dashDuration, dashSpeedCurve));
+    }
+
+
     public bool IsGrounded()
     {
         return _grounded.IsGrounded;
@@ -69,18 +75,19 @@ public class CC_Locomotor : Locomotor
     {
         if(!_grounded.IsGrounded) _verticalDirection += Physics.gravity * 3 * Time.deltaTime;
     }
-    //private IEnumerator Jump()
-    //{
-    //    float timer = 0;
-    //    while (timer < LocomotionData.BaseJumpTime)
-    //    {
-    //        float curveValue = LocomotionData.JumpSpeedCurve.Evaluate(timer / LocomotionData.BaseJumpTime);
-    //        float verticalSpeed = LocomotionData.BaseJumpSpeed * curveValue;
 
-    //        _characterController.Move(new Vector3(0, verticalSpeed, 0) * Time.deltaTime);
-    //        timer += Time.deltaTime;
+    private IEnumerator Dash(float dashDistance,float dashDuration, AnimationCurve dashCurve)
+    {
+        float timer = 0;
+        while (timer < dashDuration)
+        {
+            float curveValue =dashCurve.Evaluate(timer / dashDuration);
+            float distance = dashDistance * curveValue;
 
-    //        yield return null;
-    //    }
-    //}
+            _characterController.Move(distance * Time.deltaTime * MovementDirection);
+            timer += Time.deltaTime;
+
+            yield return null;
+        }
+    }
 }

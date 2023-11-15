@@ -48,6 +48,7 @@ public class Fall : MonoBehaviour
         _lowestPoint = transform.position.y;
         float fallDistance = _highestPoint - _lowestPoint;
         _stopChecking = true;
+        _grounded.OnLanding -= StopFalling;
 
         if(fallDistance < _minDistanceForDamage) return;    
 

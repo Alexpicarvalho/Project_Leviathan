@@ -7,6 +7,9 @@ public class FollowTarget : MonoBehaviour
     [SerializeField] private Transform _target;
     private Vector3 _offSet;
 
+    [Header("Damping")]
+    [SerializeField] private float _followSpeed;
+
     private void Awake()
     {
         _offSet = transform.position - _target.position;
@@ -14,6 +17,6 @@ public class FollowTarget : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = _target.position + _offSet;
+        transform.position = Vector3.Lerp(transform.position, _target.position + _offSet, Time.deltaTime * _followSpeed);
     }
 }
