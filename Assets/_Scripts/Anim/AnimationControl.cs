@@ -22,5 +22,9 @@ public partial class AnimationControl : MonoBehaviour
     {
         _locomotor.OnJump += Jump;
         _locomotor.GetComponent<Grounded>().OnLanding += Landed;
+
+        _dasher = GetComponent<Dasher>();
+        _dasher.OnDash += Dash;
+        _dasher.OnDashEnd += DashEnded;
     }
 }

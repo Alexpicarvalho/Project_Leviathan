@@ -15,6 +15,7 @@ public class Dasher : MonoBehaviour
     [SerializeField] protected float _dashDuration;
     [SerializeField] protected float _dashCooldown;
     [SerializeField] protected AnimationCurve _dashSpeedCurve;
+    [SerializeField] protected float _verticalMultiplier = .1f;
 
     //Readonly properties
     public float DashDistance => _dashDistance;
@@ -23,8 +24,10 @@ public class Dasher : MonoBehaviour
 
     //Events
     public event Action OnDash;
+    public event Action OnDashEnd;  
 
     //Overrideable methods
 
     protected virtual void Dash(){ OnDash?.Invoke(); }
+    public virtual void DashEnd() { OnDashEnd?.Invoke(); }
 }

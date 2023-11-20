@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Linq;
 
 public class MeshTrailFX : MonoBehaviour
 {
@@ -11,8 +12,14 @@ public class MeshTrailFX : MonoBehaviour
     [SerializeField] private float _meshRendererRefreshRate = 0.1f;
     [SerializeField] private Material _trailMaterial;
     [SerializeField] private float _trailParticleLifetime = 1f;
-    [SerializeField] private float _trailStartZOffset = 0.5f;   
+    [SerializeField] private float _trailStartZOffset = 0.5f;
+    [SerializeField] private float _trailScaleMultiplier = 1f;
+    [SerializeField] private bool _hideMeshRenderer = true;
     private Dasher _dasher;
+
+    [Header("Extra")]
+    [SerializeField] private GameObject _trailParticleSystem;
+    private List<ParticleSystem> _trailPSs = new List<ParticleSystem>();
 
     [Header("Debug")]
     [SerializeField] private bool _fixedTime = false;
@@ -27,8 +34,25 @@ public class MeshTrailFX : MonoBehaviour
         _dasher = GetComponentInParent<Dasher>();
         _meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
         SetActiveTime(_dasher.DashDuration);
+        InstantiateParticleSystem();
         if (_meshRenderers.Length == 0 || !_dasher) Destroy(this);
     }
+
+    private void InstantiateParticleSystem()
+    {
+        _trailPSs = Instantiate(_trailParticleSystem, transform).GetComponentsInChildren<ParticleSystem>(true).ToList();
+        ToggleParticleSystem(false);
+    }
+
+    private void ToggleParticleSystem(bool on)
+    {
+        foreach (var ps in _trailPSs)
+        {
+            if (on) ps.enableEmission = true;
+            else ps.enableEmission = false;
+        }
+    }
+
     public void SetActiveTime(float newActiveTime)
     {
         if (_fixedTime) return;
@@ -43,6 +67,9 @@ public class MeshTrailFX : MonoBehaviour
 
     IEnumerator ActivateTrail(float activeTime)
     {
+        if(_hideMeshRenderer) Camera.main.cullingMask &= ~(1 << LayerMask.NameToLayer("Player"));
+        if (_trailParticleSystem) ToggleParticleSystem(true);
+
         while (activeTime > 0)
         {
             activeTime -= _meshRendererRefreshRate;
@@ -54,6 +81,7 @@ public class MeshTrailFX : MonoBehaviour
                 trailPiece.transform.position = transform.position 
                     + transform.forward * _trailStartZOffset;
                 trailPiece.transform.rotation = transform.rotation;
+                trailPiece.transform.DOScale(transform.localScale * _trailScaleMultiplier, _trailParticleLifetime);
 
                 MeshRenderer mr = trailPiece.AddComponent<MeshRenderer>();
                 MeshFilter mf = trailPiece.AddComponent<MeshFilter>();
@@ -77,6 +105,8 @@ public class MeshTrailFX : MonoBehaviour
         }
 
         _isActive = false;
+        if (_hideMeshRenderer) Camera.main.cullingMask |= (1 << LayerMask.NameToLayer("Player"));
+        if (_trailParticleSystem) ToggleParticleSystem(false);
     }
 
     private void OnEnable()

@@ -8,8 +8,11 @@ public partial class AnimationControl : MonoBehaviour //Movement
     [SerializeField] private string _isMovingParam = "IsMoving";
     [SerializeField] private string JumpParam = "Jump"; 
     [SerializeField] private string LandedParam = "Landed";
+    [SerializeField] private string DashingParam = "Dashing";
+
     //private Refs
     private Locomotor _locomotor;
+    private Dasher _dasher;
 
     private void Update()
     {
@@ -20,6 +23,16 @@ public partial class AnimationControl : MonoBehaviour //Movement
     private void Jump()
     {
         _animator.SetTrigger(JumpParam);
+    }
+
+    private void Dash()
+    {
+        _animator.SetBool(DashingParam, true);
+    }
+
+    private void DashEnded()
+    {
+        _animator.SetBool(DashingParam, false);
     }
 
     private void Landed()

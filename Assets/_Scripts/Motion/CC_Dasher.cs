@@ -17,7 +17,12 @@ public class CC_Dasher : Dasher
     override protected void Dash()
     {
         base.Dash();
-        _locomotor.ProcessDash(_dashDistance, _dashDuration, _dashSpeedCurve);
+        _locomotor.ProcessDash(_dashDistance, _dashDuration, _dashSpeedCurve, this, _verticalMultiplier);
+    }
+
+    public override void DashEnd()
+    {
+        base.DashEnd();
     }
 
     //TESTING ONLY

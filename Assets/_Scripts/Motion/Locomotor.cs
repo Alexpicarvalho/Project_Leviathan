@@ -31,7 +31,7 @@ public class Locomotor : MonoBehaviour
     public float CurrentStartSpeed => _currentStartSpeed;
     public float CurrentAcceleration => _currentAcceleration;
     public float CurrentDeceleration => _currentDeceleration;
-    public Vector3 MovementDirection { get; protected set; }
+    [SerializeField] public Vector3 MovementDirection { get; protected set; }
     #endregion
 
     //Events

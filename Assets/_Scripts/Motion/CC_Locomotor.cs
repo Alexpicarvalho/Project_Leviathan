@@ -32,16 +32,16 @@ public class CC_Locomotor : Locomotor
         base.ProcessMovement(movement);
         // Move the character controller
         //Debug.LogFormat("Moving at {0} mps towards {1}  ", CurrentSpeed, MovementDirection);
-        _characterController.Move((movement * CurrentSpeed + _verticalDirection) * Time.deltaTime );
+        _characterController.Move((movement * CurrentSpeed + _verticalDirection) * Time.deltaTime);
     }
 
     public override void ProcessRotation(float rotation)
     {
         //Maybe we can use DOTween to smooth the rotation?
         float angle = Mathf.SmoothDampAngle(
-            transform.eulerAngles.y, 
-            rotation, 
-            ref _turnSmoothVelocity, 
+            transform.eulerAngles.y,
+            rotation,
+            ref _turnSmoothVelocity,
             _turnSmoothTime);
 
         // Rotate the character controller
@@ -60,9 +60,9 @@ public class CC_Locomotor : Locomotor
         //StartCoroutine(Jump());
     }
 
-    public void ProcessDash(float dashDistance, float dashDuration, AnimationCurve dashSpeedCurve)
+    public void ProcessDash(float dashDistance, float dashDuration, AnimationCurve dashSpeedCurve, Dasher dasherScript, float verticalMultiplier)
     {
-        StartCoroutine(Dash(dashDistance, dashDuration, dashSpeedCurve));
+        StartCoroutine(Dash(dashDistance, dashDuration, dashSpeedCurve, dasherScript, verticalMultiplier));
     }
 
 
@@ -73,21 +73,32 @@ public class CC_Locomotor : Locomotor
 
     private void Update()
     {
-        if(!_grounded.IsGrounded) _verticalDirection += Physics.gravity * 3 * Time.deltaTime;
+        if (!_grounded.IsGrounded) _verticalDirection += Physics.gravity * 3 * Time.deltaTime;
     }
 
-    private IEnumerator Dash(float dashDistance,float dashDuration, AnimationCurve dashCurve)
+    private IEnumerator Dash(float dashDistance, float dashDuration, AnimationCurve dashCurve, Dasher dasherScript, float verticalMultiplier)
     {
         float timer = 0;
         while (timer < dashDuration)
         {
-            float curveValue =dashCurve.Evaluate(timer / dashDuration);
+            float curveValue = dashCurve.Evaluate(timer / dashDuration);
             float distance = dashDistance * curveValue;
 
-            _characterController.Move(distance * Time.deltaTime * MovementDirection);
+            //IF GOING UP WE WANT TO GIVE A BOOST
+            if (_verticalDirection.y > 0)
+            {
+                _characterController.Move(distance * Time.deltaTime * (MovementDirection +
+                _verticalDirection * verticalMultiplier));
+            }
+            else
+            {
+                _characterController.Move(distance * Time.deltaTime * MovementDirection);
+            }
+
             timer += Time.deltaTime;
 
             yield return null;
         }
+        dasherScript.DashEnd();
     }
 }
