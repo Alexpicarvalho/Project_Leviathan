@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 7cce7c32a6f9b2b4181f2ea08d2a469d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: PIG_
+    100002: PIG_ Head
+    100004: PIG_ L Calf
+    100006: PIG_ L Clavicle
+    100008: PIG_ L Finger0
+    100010: PIG_ L Foot
+    100012: PIG_ L Forearm
+    100014: PIG_ L Hand
+    100016: PIG_ L HorseLink
+    100018: PIG_ L Thigh
+    100020: PIG_ L UpperArm
+    100022: PIG_ Neck
+    100024: PIG_ Neck1
+    100026: PIG_ Pelvis
+    100028: PIG_ Queue de cheval 1
+    100030: PIG_ R Calf
+    100032: PIG_ R Clavicle
+    100034: PIG_ R Finger0
+    100036: PIG_ R Foot
+    100038: PIG_ R Forearm
+    100040: PIG_ R Hand
+    100042: PIG_ R HorseLink
+    100044: PIG_ R Thigh
+    100046: PIG_ R UpperArm
+    100048: PIG_ Spine
+    100050: PIG_ Spine1
+    100052: PIG_ Tail
+    100054: PIG_ Tail1
+    100056: PIG_ Tail2
+    100058: PIG_ Tail3
+    100060: PIG_ Tail4
+    100062: PIG_ Tail5
+    100064: PIG_ Tail6
+    100066: Pig_Nose
+    100068: root
+    100070: //RootNode
+    100072: SK_Pig_LOD0
+    100074: SK_Pig_LOD1
+    100076: SK_Pig_LOD2
+    100078: SK_Pig_LOD3
+    400000: PIG_
+    400002: PIG_ Head
+    400004: PIG_ L Calf
+    400006: PIG_ L Clavicle
+    400008: PIG_ L Finger0
+    400010: PIG_ L Foot
+    400012: PIG_ L Forearm
+    400014: PIG_ L Hand
+    400016: PIG_ L HorseLink
+    400018: PIG_ L Thigh
+    400020: PIG_ L UpperArm
+    400022: PIG_ Neck
+    400024: PIG_ Neck1
+    400026: PIG_ Pelvis
+    400028: PIG_ Queue de cheval 1
+    400030: PIG_ R Calf
+    400032: PIG_ R Clavicle
+    400034: PIG_ R Finger0
+    400036: PIG_ R Foot
+    400038: PIG_ R Forearm
+    400040: PIG_ R Hand
+    400042: PIG_ R HorseLink
+    400044: PIG_ R Thigh
+    400046: PIG_ R UpperArm
+    400048: PIG_ Spine
+    400050: PIG_ Spine1
+    400052: PIG_ Tail
+    400054: PIG_ Tail1
+    400056: PIG_ Tail2
+    400058: PIG_ Tail3
+    400060: PIG_ Tail4
+    400062: PIG_ Tail5
+    400064: PIG_ Tail6
+    400066: Pig_Nose
+    400068: root
+    400070: //RootNode
+    400072: SK_Pig_LOD0
+    400074: SK_Pig_LOD1
+    400076: SK_Pig_LOD2
+    400078: SK_Pig_LOD3
+    2100000: M_Pig
+    2100002: M_PigHair
+    4300000: SK_Pig_LOD0
+    4300002: SK_Pig_LOD1
+    4300004: SK_Pig_LOD2
+    4300006: SK_Pig_LOD3
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SK_Pig_LOD0
+    13700002: SK_Pig_LOD1
+    13700004: SK_Pig_LOD2
+    13700006: SK_Pig_LOD3
+    20500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pig
+    second: {fileID: 2100000, guid: 3f8972392607eda449e7d35a5a073d65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_PigHair
+    second: {fileID: 2100000, guid: d22086b6a99e8324f8e2166a975eb822, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.125
+    - 0.0625
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
