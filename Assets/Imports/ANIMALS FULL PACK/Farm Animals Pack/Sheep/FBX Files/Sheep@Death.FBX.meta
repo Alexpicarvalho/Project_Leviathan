@@ -1,0 +1,264 @@
+fileFormatVersion: 2
+guid: 6faa9b7a7f1711948b2583cea1af23c7
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: root
+    100002: //RootNode
+    100004: SHEEP_
+    100006: SHEEP_ Head
+    100008: SHEEP_ L Calf
+    100010: SHEEP_ L Clavicle
+    100012: SHEEP_ L Finger0
+    100014: SHEEP_ L Foot
+    100016: SHEEP_ L Forearm
+    100018: SHEEP_ L Hand
+    100020: SHEEP_ L HorseLink
+    100022: SHEEP_ L Thigh
+    100024: SHEEP_ L UpperArm
+    100026: SHEEP_ Neck
+    100028: SHEEP_ Neck1
+    100030: SHEEP_ Neck2
+    100032: SHEEP_ Pelvis
+    100034: SHEEP_ Queue de cheval 1
+    100036: SHEEP_ R Calf
+    100038: SHEEP_ R Clavicle
+    100040: SHEEP_ R Finger0
+    100042: SHEEP_ R Foot
+    100044: SHEEP_ R Forearm
+    100046: SHEEP_ R Hand
+    100048: SHEEP_ R HorseLink
+    100050: SHEEP_ R Thigh
+    100052: SHEEP_ R UpperArm
+    100054: SHEEP_ Spine
+    100056: SHEEP_ Spine1
+    100058: SHEEP_ Tail
+    100060: SHEEP_ Tail1
+    100062: SHEEP_ Tail2
+    400000: root
+    400002: //RootNode
+    400004: SHEEP_
+    400006: SHEEP_ Head
+    400008: SHEEP_ L Calf
+    400010: SHEEP_ L Clavicle
+    400012: SHEEP_ L Finger0
+    400014: SHEEP_ L Foot
+    400016: SHEEP_ L Forearm
+    400018: SHEEP_ L Hand
+    400020: SHEEP_ L HorseLink
+    400022: SHEEP_ L Thigh
+    400024: SHEEP_ L UpperArm
+    400026: SHEEP_ Neck
+    400028: SHEEP_ Neck1
+    400030: SHEEP_ Neck2
+    400032: SHEEP_ Pelvis
+    400034: SHEEP_ Queue de cheval 1
+    400036: SHEEP_ R Calf
+    400038: SHEEP_ R Clavicle
+    400040: SHEEP_ R Finger0
+    400042: SHEEP_ R Foot
+    400044: SHEEP_ R Forearm
+    400046: SHEEP_ R Hand
+    400048: SHEEP_ R HorseLink
+    400050: SHEEP_ R Thigh
+    400052: SHEEP_ R UpperArm
+    400054: SHEEP_ Spine
+    400056: SHEEP_ Spine1
+    400058: SHEEP_ Tail
+    400060: SHEEP_ Tail1
+    400062: SHEEP_ Tail2
+    7400000: Death
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/SHEEP_
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ L Thigh
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ L Thigh/SHEEP_ L Calf
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ L Thigh/SHEEP_ L Calf/SHEEP_ L HorseLink
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ L Thigh/SHEEP_ L Calf/SHEEP_ L HorseLink/SHEEP_
+          L Foot
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ R Thigh
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ R Thigh/SHEEP_ R Calf
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ R Thigh/SHEEP_ R Calf/SHEEP_ R HorseLink
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ R Thigh/SHEEP_ R Calf/SHEEP_ R HorseLink/SHEEP_
+          R Foot
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ L Clavicle
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ L Clavicle/SHEEP_
+          L UpperArm
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ L Clavicle/SHEEP_
+          L UpperArm/SHEEP_ L Forearm
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ L Clavicle/SHEEP_
+          L UpperArm/SHEEP_ L Forearm/SHEEP_ L Hand
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ L Clavicle/SHEEP_
+          L UpperArm/SHEEP_ L Forearm/SHEEP_ L Hand/SHEEP_ L Finger0
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ Neck
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ Neck/SHEEP_
+          Neck1
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ Neck/SHEEP_
+          Neck1/SHEEP_ Neck2
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ Neck/SHEEP_
+          Neck1/SHEEP_ Neck2/SHEEP_ Head
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ Neck/SHEEP_
+          Neck1/SHEEP_ Neck2/SHEEP_ Head/SHEEP_ Queue de cheval 1
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ R Clavicle
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ R Clavicle/SHEEP_
+          R UpperArm
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ R Clavicle/SHEEP_
+          R UpperArm/SHEEP_ R Forearm
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ R Clavicle/SHEEP_
+          R UpperArm/SHEEP_ R Forearm/SHEEP_ R Hand
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Spine/SHEEP_ Spine1/SHEEP_ R Clavicle/SHEEP_
+          R UpperArm/SHEEP_ R Forearm/SHEEP_ R Hand/SHEEP_ R Finger0
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Tail
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Tail/SHEEP_ Tail1
+        weight: 1
+      - path: root/SHEEP_/SHEEP_ Pelvis/SHEEP_ Tail/SHEEP_ Tail1/SHEEP_ Tail2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: c30475bc8f067c44fa65f6a7a8d8ca9e,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
