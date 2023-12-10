@@ -1,0 +1,614 @@
+fileFormatVersion: 2
+guid: 5b5d5933c7319a145af094ecebd6c1ee
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: root
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: Wolf_
+  - first:
+      1: 100006
+    second: Wolf_ Head
+  - first:
+      1: 100008
+    second: Wolf_ L Calf
+  - first:
+      1: 100010
+    second: Wolf_ L Clavicle
+  - first:
+      1: 100012
+    second: Wolf_ L Finger0
+  - first:
+      1: 100014
+    second: Wolf_ L Foot
+  - first:
+      1: 100016
+    second: Wolf_ L Forearm
+  - first:
+      1: 100018
+    second: Wolf_ L Hand
+  - first:
+      1: 100020
+    second: Wolf_ L HorseLink
+  - first:
+      1: 100022
+    second: Wolf_ L Thigh
+  - first:
+      1: 100024
+    second: Wolf_ L UpperArm
+  - first:
+      1: 100026
+    second: Wolf_ Neck
+  - first:
+      1: 100028
+    second: Wolf_ Neck1
+  - first:
+      1: 100030
+    second: Wolf_ Neck2
+  - first:
+      1: 100032
+    second: Wolf_ Pelvis
+  - first:
+      1: 100034
+    second: Wolf_ Ponytail1
+  - first:
+      1: 100036
+    second: Wolf_ R Calf
+  - first:
+      1: 100038
+    second: Wolf_ R Clavicle
+  - first:
+      1: 100040
+    second: Wolf_ R Finger0
+  - first:
+      1: 100042
+    second: Wolf_ R Foot
+  - first:
+      1: 100044
+    second: Wolf_ R Forearm
+  - first:
+      1: 100046
+    second: Wolf_ R Hand
+  - first:
+      1: 100048
+    second: Wolf_ R HorseLink
+  - first:
+      1: 100050
+    second: Wolf_ R Thigh
+  - first:
+      1: 100052
+    second: Wolf_ R UpperArm
+  - first:
+      1: 100054
+    second: Wolf_ Spine
+  - first:
+      1: 100056
+    second: Wolf_ Spine1
+  - first:
+      1: 100058
+    second: Wolf_ Tail
+  - first:
+      1: 100060
+    second: Wolf_ Tail1
+  - first:
+      1: 100062
+    second: Wolf_ Tail2
+  - first:
+      1: 100064
+    second: Wolf_ Tail3
+  - first:
+      1: 100066
+    second: Wolf_ Tail4
+  - first:
+      4: 400000
+    second: root
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: Wolf_
+  - first:
+      4: 400006
+    second: Wolf_ Head
+  - first:
+      4: 400008
+    second: Wolf_ L Calf
+  - first:
+      4: 400010
+    second: Wolf_ L Clavicle
+  - first:
+      4: 400012
+    second: Wolf_ L Finger0
+  - first:
+      4: 400014
+    second: Wolf_ L Foot
+  - first:
+      4: 400016
+    second: Wolf_ L Forearm
+  - first:
+      4: 400018
+    second: Wolf_ L Hand
+  - first:
+      4: 400020
+    second: Wolf_ L HorseLink
+  - first:
+      4: 400022
+    second: Wolf_ L Thigh
+  - first:
+      4: 400024
+    second: Wolf_ L UpperArm
+  - first:
+      4: 400026
+    second: Wolf_ Neck
+  - first:
+      4: 400028
+    second: Wolf_ Neck1
+  - first:
+      4: 400030
+    second: Wolf_ Neck2
+  - first:
+      4: 400032
+    second: Wolf_ Pelvis
+  - first:
+      4: 400034
+    second: Wolf_ Ponytail1
+  - first:
+      4: 400036
+    second: Wolf_ R Calf
+  - first:
+      4: 400038
+    second: Wolf_ R Clavicle
+  - first:
+      4: 400040
+    second: Wolf_ R Finger0
+  - first:
+      4: 400042
+    second: Wolf_ R Foot
+  - first:
+      4: 400044
+    second: Wolf_ R Forearm
+  - first:
+      4: 400046
+    second: Wolf_ R Hand
+  - first:
+      4: 400048
+    second: Wolf_ R HorseLink
+  - first:
+      4: 400050
+    second: Wolf_ R Thigh
+  - first:
+      4: 400052
+    second: Wolf_ R UpperArm
+  - first:
+      4: 400054
+    second: Wolf_ Spine
+  - first:
+      4: 400056
+    second: Wolf_ Spine1
+  - first:
+      4: 400058
+    second: Wolf_ Tail
+  - first:
+      4: 400060
+    second: Wolf_ Tail1
+  - first:
+      4: 400062
+    second: Wolf_ Tail2
+  - first:
+      4: 400064
+    second: Wolf_ Tail3
+  - first:
+      4: 400066
+    second: Wolf_ Tail4
+  - first:
+      74: 7400000
+    second: Run_RM
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run_RM
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/Wolf_
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ L Thigh
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ L Thigh/Wolf_ L Calf
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ L Thigh/Wolf_ L Calf/Wolf_ L HorseLink
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ L Thigh/Wolf_ L Calf/Wolf_ L HorseLink/Wolf_
+          L Foot
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ R Thigh
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ R Thigh/Wolf_ R Calf
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ R Thigh/Wolf_ R Calf/Wolf_ R HorseLink
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ R Thigh/Wolf_ R Calf/Wolf_ R HorseLink/Wolf_
+          R Foot
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ L Clavicle
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ L Clavicle/Wolf_
+          L UpperArm
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ L Clavicle/Wolf_
+          L UpperArm/Wolf_ L Forearm
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ L Clavicle/Wolf_
+          L UpperArm/Wolf_ L Forearm/Wolf_ L Hand
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ L Clavicle/Wolf_
+          L UpperArm/Wolf_ L Forearm/Wolf_ L Hand/Wolf_ L Finger0
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ Neck
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ Neck/Wolf_ Neck1
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ Neck/Wolf_ Neck1/Wolf_
+          Neck2
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ Neck/Wolf_ Neck1/Wolf_
+          Neck2/Wolf_ Head
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ Neck/Wolf_ Neck1/Wolf_
+          Neck2/Wolf_ Head/Wolf_ Ponytail1
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ R Clavicle
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ R Clavicle/Wolf_
+          R UpperArm
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ R Clavicle/Wolf_
+          R UpperArm/Wolf_ R Forearm
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ R Clavicle/Wolf_
+          R UpperArm/Wolf_ R Forearm/Wolf_ R Hand
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Spine/Wolf_ Spine1/Wolf_ R Clavicle/Wolf_
+          R UpperArm/Wolf_ R Forearm/Wolf_ R Hand/Wolf_ R Finger0
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Tail
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Tail/Wolf_ Tail1
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Tail/Wolf_ Tail1/Wolf_ Tail2
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Tail/Wolf_ Tail1/Wolf_ Tail2/Wolf_ Tail3
+        weight: 1
+      - path: root/Wolf_/Wolf_ Pelvis/Wolf_ Tail/Wolf_ Tail1/Wolf_ Tail2/Wolf_ Tail3/Wolf_
+          Tail4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: SK_Wolf(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: -0.000000087965596, z: -0.000000087965596, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SK_Wolf_LOD0
+      parentName: SK_Wolf(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: root
+      parentName: SK_Wolf(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Wolf_
+      parentName: root
+      position: {x: -0, y: 0.301, z: 0.6113845}
+      rotation: {x: 0.49999973, y: -0.50000024, z: 0.49999967, w: 0.50000036}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Wolf_ Pelvis
+      parentName: Wolf_
+      position: {x: -0.6113847, y: -0.0000014305115, z: 1.0164981}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 1.0000001, y: 1.0000012, z: 1.0000001}
+    - name: Wolf_ L Thigh
+      parentName: Wolf_ Pelvis
+      position: {x: 0.0000001335144, y: 0.00000015258789, z: 0.10517511}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.9999998, y: 1.0000002, z: 1.0000006}
+    - name: Wolf_ L Calf
+      parentName: Wolf_ L Thigh
+      position: {x: -0.2594065, y: -0.000000009536743, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 0.9999991, z: 0.9999994}
+    - name: Wolf_ L HorseLink
+      parentName: Wolf_ L Calf
+      position: {x: -0.23665962, y: 0, z: -0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000006}
+    - name: Wolf_ L Foot
+      parentName: Wolf_ L HorseLink
+      position: {x: -0.137117, y: -0.000000019073486, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999934, z: 0.99999946}
+    - name: Wolf_ Spine
+      parentName: Wolf_ Pelvis
+      position: {x: -0.13848612, y: -0.00016075134, z: -0.000000012118689}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000008, y: 1.0000026, z: 1.0000015}
+    - name: Wolf_ Spine1
+      parentName: Wolf_ Spine
+      position: {x: -0.20172332, y: -0.00021266937, z: -5.9299055e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Wolf_ L Clavicle
+      parentName: Wolf_ Spine1
+      position: {x: -0.26887926, y: -0.021965675, z: 0.033790722}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 0.9999984, y: 0.99999696, z: 0.999999}
+    - name: Wolf_ L UpperArm
+      parentName: Wolf_ L Clavicle
+      position: {x: -0.106824055, y: -0.000000038146972, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999988, y: 1.0000001, z: 1.0000013}
+    - name: Wolf_ L Forearm
+      parentName: Wolf_ L UpperArm
+      position: {x: -0.24056548, y: 0.000000028610229, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000011, z: 1.0000002}
+    - name: Wolf_ L Hand
+      parentName: Wolf_ L Forearm
+      position: {x: -0.23401941, y: 0.000000019073486, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 0.99999946, y: 1.0000004, z: 0.99999994}
+    - name: Wolf_ L Finger0
+      parentName: Wolf_ L Hand
+      position: {x: -0.11769618, y: 0.006685238, z: -0.0045500565}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 1.0000023, y: 1.0000011, z: 1.0000013}
+    - name: Wolf_ Neck
+      parentName: Wolf_ Spine1
+      position: {x: -0.26678097, y: -0.045779075, z: -0.00000012675969}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1, z: 0.99999994}
+    - name: Wolf_ Neck1
+      parentName: Wolf_ Neck
+      position: {x: -0.11699997, y: -0.000092773436, z: -2.6731867e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999946, y: 0.9999997, z: 0.9999998}
+    - name: Wolf_ Neck2
+      parentName: Wolf_ Neck1
+      position: {x: -0.11699989, y: -0.0000925827, z: -2.52694e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000001, y: 1.0000017, z: 1.0000006}
+    - name: Wolf_ Head
+      parentName: Wolf_ Neck2
+      position: {x: -0.11737716, y: 0.00013786316, z: -1.3154931e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.99999875, z: 1.0000002}
+    - name: Wolf_ Ponytail1
+      parentName: Wolf_ Head
+      position: {x: 0.041783143, y: 0.03476467, z: -0.000000055876008}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000001, y: 1.0000014, z: 1.0000014}
+    - name: Wolf_ R Clavicle
+      parentName: Wolf_ Spine1
+      position: {x: -0.26887926, y: -0.021965483, z: -0.03379084}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 1.0000017, y: 0.9999985, z: 1.000002}
+    - name: Wolf_ R UpperArm
+      parentName: Wolf_ R Clavicle
+      position: {x: -0.106824055, y: -0.000000038146972, z: -0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999986, y: 1.0000007, z: 1.0000014}
+    - name: Wolf_ R Forearm
+      parentName: Wolf_ R UpperArm
+      position: {x: -0.24056552, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.000001, z: 1.0000006}
+    - name: Wolf_ R Hand
+      parentName: Wolf_ R Forearm
+      position: {x: -0.23401935, y: 0.000000038146972, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 0.9999997, y: 1.0000015, z: 1.0000023}
+    - name: Wolf_ R Finger0
+      parentName: Wolf_ R Hand
+      position: {x: -0.117696166, y: 0.006685276, z: 0.0045500756}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 1.000001, y: 0.99999994, z: 0.999999}
+    - name: Wolf_ R Thigh
+      parentName: Wolf_ Pelvis
+      position: {x: -0.00000017166137, y: -0.00000015258789, z: -0.10517511}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1.0000014, y: 1.0000015, z: 1.0000015}
+    - name: Wolf_ R Calf
+      parentName: Wolf_ R Thigh
+      position: {x: -0.2594065, y: 0.000000028610229, z: 0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000018, y: 1.0000005, z: 1.0000005}
+    - name: Wolf_ R HorseLink
+      parentName: Wolf_ R Calf
+      position: {x: -0.2366596, y: 0.000000038146972, z: -0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000001, y: 1.0000023, z: 1.0000015}
+    - name: Wolf_ R Foot
+      parentName: Wolf_ R HorseLink
+      position: {x: -0.1371171, y: 0.000000019073486, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999996, z: 0.99999994}
+    - name: Wolf_ Tail
+      parentName: Wolf_ Pelvis
+      position: {x: 0.15195793, y: -0.08002308, z: 0.00000018313686}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000014, y: 1.0000008, z: 1.0000013}
+    - name: Wolf_ Tail1
+      parentName: Wolf_ Tail
+      position: {x: -0.10799053, y: -0.00008598327, z: -2.5145708e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000007}
+    - name: Wolf_ Tail2
+      parentName: Wolf_ Tail1
+      position: {x: -0.10799053, y: -0.00008598327, z: -2.3108442e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000002, y: 1.0000001, z: 1.0000019}
+    - name: Wolf_ Tail3
+      parentName: Wolf_ Tail2
+      position: {x: -0.10799057, y: -0.00008598327, z: -2.35741e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000001, y: 0.9999998, z: 1.0000011}
+    - name: Wolf_ Tail4
+      parentName: Wolf_ Tail3
+      position: {x: -0.10799049, y: -0.00008590698, z: -2.339948e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 0.9999996}
+    - name: Wolf_ Tail5
+      parentName: Wolf_ Tail4
+      position: {x: -0.10799205, y: -0.00008605957, z: -2.4883776e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 0.9999998, z: 1.0000014}
+    - name: SK_Wolf_LOD1
+      parentName: SK_Wolf(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SK_Wolf_LOD2
+      parentName: SK_Wolf(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SK_Wolf_LOD3
+      parentName: SK_Wolf(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: root
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2c80979df7ad6cd43b45189d55f9943e,
+    type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
