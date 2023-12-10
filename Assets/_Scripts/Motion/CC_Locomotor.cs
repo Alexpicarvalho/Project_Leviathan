@@ -57,7 +57,8 @@ public class CC_Locomotor : Locomotor
         // Apply jump force
         _verticalDirection.y = Mathf.Sqrt(LocomotionData.BaseJumpSpeed * -3f * -9.81f);
 
-        //StartCoroutine(Jump());
+        //Tell Grounded to ignore grace time
+        _grounded.JumpListening();
     }
 
     public void ProcessDash(float dashDistance, float dashDuration, AnimationCurve dashSpeedCurve, Dasher dasherScript, float verticalMultiplier)

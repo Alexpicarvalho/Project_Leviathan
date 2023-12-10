@@ -103,7 +103,7 @@ public class MeshTrailFX : MonoBehaviour
             }
             yield return new WaitForSeconds(_meshRendererRefreshRate);
         }
-
+        yield return new WaitForSeconds(.2f);
         _isActive = false;
         if (_hideMeshRenderer) Camera.main.cullingMask |= (1 << LayerMask.NameToLayer("Player"));
         if (_trailParticleSystem) ToggleParticleSystem(false);

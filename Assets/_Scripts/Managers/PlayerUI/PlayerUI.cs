@@ -40,7 +40,7 @@ public partial class PlayerUI : MonoBehaviour
         if (_playerHealth)
         {
             _playerHealth.OnHealthChanged += ShowHealth;
-            ShowHealth(_playerHealth.CurrentHealth);
+            ShowHealth(_playerHealth.CurrentHealth, false);
         }
         
         //Stamina

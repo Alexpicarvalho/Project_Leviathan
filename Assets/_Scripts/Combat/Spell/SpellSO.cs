@@ -8,6 +8,7 @@ public class SpellSO : ScriptableObject
 {
     [Header("Values")]
     [SerializeField] private float _cooldown;
+    [SerializeField] private string _spellAnimParam;
 
     [Header("Visuals And Description")]
     [SerializeField] private string _spellName = "Spell Name";
@@ -23,4 +24,5 @@ public class SpellSO : ScriptableObject
     
     public virtual void CastSpell(){}
     public virtual void UpdateSpell() { }
+
 }

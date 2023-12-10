@@ -16,6 +16,8 @@ public class EditorTesting : MonoBehaviour
 
     [Header("Visual")]
     [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private GameObject _infoPanel;
+    [SerializeField] private GameObject _activateInfoTxt;
 
     [Header("Values")]
     [SerializeField] private float _takeDamageAmount = 10f;
@@ -27,6 +29,7 @@ public class EditorTesting : MonoBehaviour
     [SerializeField] private KeyCode _takeDamageKey = KeyCode.Alpha2;
     [SerializeField] private KeyCode _healKey = KeyCode.Alpha3;
     [SerializeField] private KeyCode _healToFull = KeyCode.Alpha4;
+    [SerializeField] private KeyCode _toggleInfoPanel = KeyCode.I;
 
 
     //Refs
@@ -50,13 +53,22 @@ public class EditorTesting : MonoBehaviour
     private void Update()
     {
         Toggle_Editor();
-        if(!_toggleEditorTesting) return;
+
+        if (Input.GetKeyDown(_toggleInfoPanel))
+        {
+            _infoPanel.SetActive(!_infoPanel.activeSelf);
+            _activateInfoTxt.SetActive(!_activateInfoTxt.activeSelf);
+        }
+
+        if (!_toggleEditorTesting) return;
 
 
         ResetPlayerPosition();
         TakeXDamage();
         HealXAmount();
         HealToFull();
+
+        
 
     }
 
@@ -112,9 +124,11 @@ public class EditorTesting : MonoBehaviour
             "Reset player position: <color=\"orange\">" + _resetPlayerPosition.ToString() + "\n <color=\"white\">" +
             "Take " + _takeDamageAmount + " Damage: <color=\"orange\">" + _takeDamageKey.ToString() + "\n <color=\"white\">" +
             "Heal " + _healAmount + " HP: <color=\"orange\">" + _healKey.ToString() + "\n <color=\"white\">" +
-            "Heal to Full: <color=\"orange\">" + _healToFull.ToString() + "\n <color=\"white\">"
-
+            "Heal to Full: <color=\"orange\">" + _healToFull.ToString() + "\n <color=\"white\">" +
+            "\n \n \n Toggle This Panel: <color=\"yellow\">" + _toggleInfoPanel.ToString() +  "<color=\"white\">"
             ;
+        _activateInfoTxt.transform.GetComponentInChildren<TextMeshProUGUI>().text = "To Activate Info Press  <color=\"yellow\">" + 
+            _toggleInfoPanel.ToString();
     }
 
     private string GetColor(bool value)

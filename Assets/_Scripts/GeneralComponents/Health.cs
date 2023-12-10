@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float _currentHealth;
     [SerializeField] private float _healthRegenPerSecond;
     [SerializeField] private float _healthRegenTickCooldown;
+    [SerializeField] private bool _isRegenActive;
     private float _healthRegenTickTimer = 0f;
     #endregion
 
@@ -20,7 +21,8 @@ public class Health : MonoBehaviour
     #endregion
 
     #region  Events
-    public event Action<float> OnHealthChanged;
+    public delegate void HealthChanged(float health, bool healthLost);
+    public HealthChanged OnHealthChanged;
     public event Action OnHealthZero;
     #endregion
 
@@ -31,7 +33,7 @@ public class Health : MonoBehaviour
         Debug.LogFormat("Losing {0} health", amount);
         _currentHealth -= amount;
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
-        OnHealthChanged?.Invoke(_currentHealth);
+        OnHealthChanged?.Invoke(_currentHealth, true);
 
         if (_currentHealth <= 0) OnHealthZero?.Invoke();
     }
@@ -40,7 +42,7 @@ public class Health : MonoBehaviour
     {
         _currentHealth += amount;
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
-        OnHealthChanged?.Invoke(_currentHealth);
+        OnHealthChanged?.Invoke(_currentHealth, false);
     }
 
     private void Update()
@@ -51,6 +53,7 @@ public class Health : MonoBehaviour
 
     private void RegenTick()
     {
+        if (!_isRegenActive || CurrentHealth >= MaxHealth) return;
         _healthRegenTickTimer = 0f;
         GainHealth(_healthRegenPerSecond * _healthRegenTickCooldown);
     }
