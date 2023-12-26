@@ -27,7 +27,7 @@ public class MeshTrailFX : MonoBehaviour
     private bool _isActive = false;
     private float _timer = 0f;
 
-    private SkinnedMeshRenderer[] _meshRenderers;
+    [SerializeField] private SkinnedMeshRenderer[] _meshRenderers;
 
     private void Awake()
     {

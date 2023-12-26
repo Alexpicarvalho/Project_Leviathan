@@ -47,4 +47,5 @@ public class Locomotor : MonoBehaviour
     public virtual void SetSpeed(float amount) { }
     public virtual void ProcessJump() { OnJump?.Invoke(); }
     public virtual bool CanJump() { return LocomotionData.CanJump; }
+    public virtual void WarpTo(Vector3 position) { }
 }

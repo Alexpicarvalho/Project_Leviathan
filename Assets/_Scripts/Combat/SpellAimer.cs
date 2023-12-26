@@ -44,6 +44,7 @@ public class SpellAimer : MonoBehaviour
     // For player
     public Vector3 GetRaycastPosition(float maxDistance = Mathf.Infinity, bool castsDown = false)
     {
+        //We do this so the max range is a sphere around the player, not the camera
         float distanceFromPlayer = Vector3.Distance(_mainCamera.transform.position, _player.position);
         maxDistance += distanceFromPlayer;
 

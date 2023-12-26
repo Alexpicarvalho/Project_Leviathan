@@ -48,6 +48,12 @@ public class CC_Locomotor : Locomotor
         transform.rotation = Quaternion.Euler(0f, angle, 0f);
     }
 
+    public override void WarpTo(Vector3 position)
+    {
+        base.WarpTo(position);
+        _characterController.Move(position - transform.position);
+    }
+
     public override void ProcessJump()
     {
         if (!_grounded.IsGrounded) return;
@@ -74,7 +80,7 @@ public class CC_Locomotor : Locomotor
 
     private void Update()
     {
-        if (!_grounded.IsGrounded) _verticalDirection += Physics.gravity * 3 * Time.deltaTime;
+        if (!_grounded.IsGrounded) _verticalDirection += 3 * Time.deltaTime * Physics.gravity;
     }
 
     private IEnumerator Dash(float dashDistance, float dashDuration, AnimationCurve dashCurve, Dasher dasherScript, float verticalMultiplier)
@@ -102,4 +108,21 @@ public class CC_Locomotor : Locomotor
         }
         dasherScript.DashEnd();
     }
+
+    private void ResetVerticalDirection()
+    {
+        _verticalDirection = Vector3.zero;
+    }
+
+    private void OnEnable()
+    {
+        _grounded.OnLanding += ResetVerticalDirection;
+        _grounded.OnOutsideGrounding += ResetVerticalDirection;
+    }
+    private void OnDisable()
+    {
+        _grounded.OnLanding -= ResetVerticalDirection;
+        _grounded.OnOutsideGrounding -= ResetVerticalDirection;
+    }
+    
 }

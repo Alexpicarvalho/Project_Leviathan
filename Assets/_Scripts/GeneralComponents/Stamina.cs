@@ -10,7 +10,10 @@ public class Stamina : MonoBehaviour
     [SerializeField] private float _currentStamina;
     [SerializeField] private float _staminaRegenPerSecond;
     [SerializeField] private float _staminaRegenTickCooldown;
+    [SerializeField] private float _startRegenDelay = 1.0f;
     private float _staminaRegenTickTimer = 0f;
+    private float _staminaRegenDelayTimer = 0f;
+    private bool _regenActive = true;
     #endregion
 
     #region public properties
@@ -31,6 +34,9 @@ public class Stamina : MonoBehaviour
         _currentStamina -= amount;
         _currentStamina = Mathf.Clamp(_currentStamina, 0, _maxStamina);
         OnStaminaChange?.Invoke(_currentStamina);
+
+        _regenActive = false;
+        _staminaRegenDelayTimer = 0f;
     }
 
     public void GainStamina(float amount)
@@ -45,13 +51,17 @@ public class Stamina : MonoBehaviour
     private void Update()
     {
         _staminaRegenTickTimer += Time.deltaTime;
-        if (_staminaRegenTickTimer >= _staminaRegenTickCooldown) RegenTick();
+        _staminaRegenDelayTimer += Time.deltaTime;
+
+        if(!_regenActive && _staminaRegenDelayTimer >= _startRegenDelay) _regenActive = true;
+
+        if (_staminaRegenTickTimer >= _staminaRegenTickCooldown && _regenActive) RegenTick();
 
 
         //TESTING
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            LoseStamina(10);
+            LoseStamina(30);
         }
     }
 
